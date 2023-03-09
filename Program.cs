@@ -8,7 +8,14 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-            Player player1 = new Player();
+            List<string> taunts = new List<string>() {
+    "You roll like a baby!",
+    "My grandma could roll better than that!",
+    "You call that a roll? I call it a joke!",
+    "You better step up your game, or go home!"
+};
+
+            Player player1 = new CreativeSmackTalkingPlayer(taunts);
             player1.Name = "Bob";
 
             Player player2 = new HumanPlayer();
